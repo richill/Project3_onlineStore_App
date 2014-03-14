@@ -6,6 +6,26 @@ gem 'rails', '3.2.17'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'devise'
+gem 'cancan'
+gem 'ransack'
+gem 'kaminari'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'best_in_place'
+gem 'fancybox-rails'
+gem 'font-awesome-rails'
+gem 'acts_as_list'
+gem 'letter_opener'
+gem 'pagination'
+gem 'thumbs_up'
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'better_errors'
+  gem 'faker'
+end
 
 
 # Gems used only for assets and not required
