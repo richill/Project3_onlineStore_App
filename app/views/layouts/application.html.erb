@@ -4,19 +4,13 @@
   <title>Tadashi-Yanai</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   <!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-
-<%= yield %>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
 <!-- start header -->
 <div class="header_bg">
 <div class="wrap">
@@ -94,97 +88,6 @@
 </div>
 <!-- end header -->
 
-
-<!-- start slider: To add Slider -->
-<!-- start cursual: To add Cursal -->
-
-
-<!-- start main -->
-<div class="main_bg1">
-<div class="wrap">  
-  <div class="main1">
-    <h2>featured products</h2>
-  </div>
-</div>
-</div>
-
-<!-- start main1 products -->
-<div class="main_bg">
-<div class="wrap">  
-  <div class="main">
-    <!-- start grids_of_3 -->
-    <div class="grids_of_3">
-      <div class="grid1_of_3">
-        <a href="details.html"> <!-- spcifies link to detail page -->
-          <img src="#" alt=""/>
-          <h3>item name</h3>
-          <div class="price">
-            <h4>$300<span>view</span></h4>
-          </div>
-          <span class="b_btm"></span>
-        </a>
-      </div>
-      <div class="grid1_of_3">
-        <a href="details.html">
-          <img src="#" alt=""/>
-          <h3>item name</h3>
-          <div class="price">
-            <h4>$300<span>view</span></h4>
-          </div>
-          <span class="b_btm"></span>
-        </a>
-      </div>
-      <div class="grid1_of_3">
-        <a href="details.html">
-          <img src="#" alt=""/>
-          <h3>item name</h3>
-          <div class="price">
-            <h4>$300<span>view</span></h4>
-          </div>
-          <span class="b_btm"></span>
-        </a>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="grids_of_3">
-      <div class="grid1_of_3">
-        <a href="details.html">
-          <img src="#" alt=""/>
-          <h3>item name</h3>
-          <div class="price">
-            <h4>$300<span>view</span></h4>
-          </div>
-          <span class="b_btm"></span>
-        </a>
-      </div>
-      <div class="grid1_of_3">
-        <a href="details.html">
-          <img src="#" alt=""/>
-          <h3>item name</h3>
-          <div class="price">
-            <h4>$300<span>view</span></h4>
-          </div>
-          <span class="b_btm"></span>
-        </a>
-      </div>
-      <div class="grid1_of_3">
-        <a href="details.html">
-          <img src="#" alt=""/>
-          <h3>item name</h3>
-          <div class="price">
-            <h4>$300<span>view</span></h4>
-          </div>
-          <span class="b_btm"></span>
-        </a>
-      </div>
-      <div class="clear"></div>
-    </div>  
-    <!-- end grids_of_3 -->
-  </div>
-</div>
-</div>  
-<!-- end main1 products -->
-<!-- end main -->
 
 
 <!-- start footer1 -->
@@ -278,6 +181,12 @@
 </div>
 </div>
 <!-- end footer2 -->
+
+<%= yield %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 
 </body>
 </html>

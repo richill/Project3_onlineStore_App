@@ -5,6 +5,6 @@ OnlineStore::Application.routes.draw do
 
   resources :home
 
-  root to: 'contacts#index'
+  root to: 'home#index'
 
 end
