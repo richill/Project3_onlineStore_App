@@ -88,7 +88,12 @@
 </div>
 <!-- end header -->
 
+<!-- start content products -->
+<%= yield %>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<!-- end content products -->
 
 <!-- start footer1 -->
 <div class="footer_bg">
@@ -182,12 +187,5 @@
 </div>
 </div>
 <!-- end footer2 -->
-
-<%= yield %>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-
 </body>
 </html>
