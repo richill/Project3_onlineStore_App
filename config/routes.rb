@@ -3,6 +3,8 @@ OnlineStore::Application.routes.draw do
 
   resources :contacts
 
+  resources :home
+
   root to: 'contacts#index'
 
 end
