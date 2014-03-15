@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OnlineStore</title>
+  <title>Tadashi-Yanai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -17,11 +21,101 @@
     <% end %>
   </div>
 
-
 <%= yield %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+
+<div class="header_bg">
+<div class="wrap">
+  <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="#" alt=""/> </a>
+    </div>
+<!--     <div class="h_icon">
+    <ul class="icon1 sub-icon1">
+      <li><a class="active-icon c1" href="#"><i>$300</i></a>
+        <ul class="sub-icon1 list">
+          <li><h3>shopping cart empty</h3><a href=""></a></li>
+          <li><p>if items in your wishlit are missing, <a href="contact.html">contact us</a> to view them</p></li>
+        </ul>
+      </li>
+    </ul>
+    </div> -->
+    <div class="h_search">
+      <form>
+        <input type="text" value="">
+        <input type="submit" value="">
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</div>
+
+<div class="header_btm">
+<div class="wrap">
+  <div class="header_sub">
+    <div class="h_menu">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li> |
+        <li><a href="#">mens store</a></li> |
+        <li><a href="#">accessories</a></li> |
+        <li><a href="#">bags</a></li> |
+        <li><a href="#">shoes</a></li> |
+        <li><a href="#">streetwear</a></li>
+      </ul>
+    </div>
+    <div class="top-nav">
+      <nav class="nav">           
+        <a href="#" id="w3-menu-trigger"> </a>
+        <ul class="nav-list" style="">
+          <li class="nav-item"><a class="active" href="index.html">Home</a></li>
+          <li class="nav-item"><a href="#">Mens Store</a></li>
+          <li class="nav-item"><a href="#">Accessories</a></li>
+          <li class="nav-item"><a href="#">Bags</a></li>
+          <li class="nav-item"><a href="#">Shoes</a></li>
+          <li class="nav-item"><a href="#">StreetWear</a></li> 
+        </ul>
+      </nav>
+      <div class="search_box">
+        <form>
+        <input type="text" value="Search"><input type="submit" value="">
+        </form>
+      </div>
+      <div class="clear"> </div>
+    </div>     
+    <div class="clear"></div>
+  </div>
+</div>
+</div>
+
+<div class="footer_bg1">
+<div class="wrap">
+  <div class="footer">
+    <!-- scroll_top_btn -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear' 
+        };
+        $().UItoTop({ easingType: 'easeOutQuart' });
+      });
+    </script>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+    <!--end scroll_top_btn -->
+    <div class="copy">
+      <p class="link">&copy;  All rights reserved | Site by&nbsp;&nbsp;<a href="https://twitter.com/ArtLoe">Richill Tamakloe</a></p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</div>
+
+
 
 </body>
 </html>
