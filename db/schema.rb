@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140314181755) do
+ActiveRecord::Schema.define(:version => 20140315140231) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(:version => 20140314181755) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "firstName"
+    t.string   "lastName"
+    t.date     "dob"
+    t.string   "gender"
+    t.text     "description"
+    t.text     "address"
+    t.string   "postcode"
+    t.string   "city"
+    t.string   "country"
+    t.string   "user_image"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
