@@ -19,6 +19,7 @@ gem 'acts_as_list'
 gem 'letter_opener'
 gem 'pagination'
 gem 'thumbs_up'
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry-rails'

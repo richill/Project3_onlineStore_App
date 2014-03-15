@@ -68,8 +68,8 @@
                 <%= current_user.email %> |
                 <%= link_to 'log out', destroy_user_session_path, method: :delete %>
               <% else%>
-                <%= link_to 'sign in', new_user_session_path %>
-                <%= link_to 'register', new_user_registration_path %>
+                <%= link_to 'sign in', new_user_session_path %> |
+                <%= link_to 'create account', new_user_registration_path %>
               <% end %>
             </div>
           </li> 
@@ -150,6 +150,7 @@
       </div>
       <div class="clear"></div>
     </div>
+    <!-- end grids_of_4 --> 
   </div>
 </div>
 </div>
@@ -174,7 +175,7 @@
     <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
     <!--end scroll_top_btn -->
     <div class="copy">
-      <p class="link">&copy;  All rights reserved | Site by&nbsp;&nbsp;<a href="https://twitter.com/ArtLoe">Richill Tamakloe</a></p>
+      <p class="link">&copy;  All rights reserved | Site by&nbsp;&nbsp;<a href="https://twitter.com/ArtLoe">Richill ARTLoe</a></p>
     </div>
     <div class="clear"></div>
   </div>
