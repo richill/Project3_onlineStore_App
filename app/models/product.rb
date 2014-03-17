@@ -4,4 +4,5 @@ class Product < ActiveRecord::Base
   belongs_to :product_type 
   belongs_to :product_brand_name
   belongs_to :productmain
+  belongs_to :size
 end

@@ -1,4 +1,7 @@
 OnlineStore::Application.routes.draw do
+  resources :sizes
+
+
   resources :productmains
 
 

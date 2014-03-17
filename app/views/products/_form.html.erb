@@ -34,7 +34,7 @@
   </div>
   <div class="field">
     <%= f.label :size_id %><br />
-    <%= f.number_field :size_id %>
+    <%= f.association :size, collection: Size.all, prompt: "choose a Size" %>
   </div>
   <div class="field">
     <%= f.label :colour_id %><br />
