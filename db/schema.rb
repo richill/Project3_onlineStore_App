@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(:version => 20140317124717) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.integer  "productType_id"
-    t.decimal  "price"
-    t.integer  "productBrandName_id"
+    t.integer  "product_type_id"
+    t.decimal  "price",                 :precision => 8, :scale => 2
+    t.integer  "product_brand_name_id"
     t.integer  "size_id"
     t.integer  "colour_id"
     t.integer  "stock"
     t.text     "description"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
   end
 
   create_table "users", :force => true do |t|

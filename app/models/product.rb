@@ -1,3 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :colour_id, :description, :name, :price, :productBrandName_id, :productType_id, :size_id, :stock
+  attr_accessible :colour_id, :description, :name, :price, :product_brand_name_id, :product_type_id, :size_id, :stock
+
+  belongs_to :product_type 
 end
