@@ -1,6 +1,7 @@
 OnlineStore::Application.routes.draw do
-  resources :products
+  resources :product_types
 
+  resources :products
 
   devise_for :users
 
