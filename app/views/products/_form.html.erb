@@ -18,11 +18,11 @@
 
   <div class="field">
     <%= f.label :Category%><br />
-    <%= f.association :productmain, collection: Productmain.all, prompt: "choose a Product" %>
+    <%= f.association :productmain, collection: Productmain.all, prompt: "select a Product" %>
   </div>
   <div class="field">
     <%= f.label :product_type %><br />
-    <%= f.association :product_type, collection: ProductType.all, prompt: "choose a product Type" %>
+    <%= f.association :product_type, collection: ProductType.all, prompt: "select a product Type" %>
   </div>
   <div class="field">
     <%= f.label :price %><br />
@@ -34,11 +34,11 @@
   </div>
   <div class="field">
     <%= f.label :size_id %><br />
-    <%= f.association :size, collection: Size.all, prompt: "choose a Size" %>
+    <%= f.association :size, collection: Size.all, prompt: "select a Size" %>
   </div>
   <div class="field">
     <%= f.label :colour_id %><br />
-    <%= f.number_field :colour_id %>
+    <%= f.association :colour, collection: Colour.all, prompt: "select a Colour" %>
   </div>
   <div class="field">
     <%= f.label :stock %><br />
