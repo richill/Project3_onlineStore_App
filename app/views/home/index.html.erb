@@ -1,4 +1,22 @@
 
+<% if notice %>
+  <p id="notice"><%= notice %></p> 
+<% end %>
+<h1>Featured Products | Your Pragmatic Catalog</h1>
+<% @products.each do |product| %>
+  <div>
+    <%= sanitize(product.name) %> <br>
+    <%= number_to_currency(product.price) %>
+    <%= link_to 'View', product %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
 <div class="header_bg">
 <div class="wrap">
 

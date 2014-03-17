@@ -1,4 +1,7 @@
 OnlineStore::Application.routes.draw do
+  resources :carts
+
+
   resources :colours
 
 

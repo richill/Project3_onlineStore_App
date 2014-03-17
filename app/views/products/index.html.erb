@@ -21,7 +21,7 @@
     <td><%= product.name %></td>
     <td><%= product.productmain.name %></td>
     <td><%= product.product_type.name %></td>
-    <td><%= product.price %></td>
+    <td><%= number_to_currency(product.price) %></td>
     <td><%= product.product_brand_name.name %></td>
     <td><%= product.size.name %></td>
     <td><%= product.colour.name %></td>
