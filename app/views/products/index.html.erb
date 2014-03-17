@@ -3,9 +3,10 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Producttype</th>
+    <th>Category</th>
+    <th>Product Type</th>
     <th>Price</th>
-    <th>Productbrandname</th>
+    <th>Product Brand</th>
     <th>Size</th>
     <th>Colour</th>
     <th>Stock</th>
@@ -18,11 +19,12 @@
 <% @products.each do |product| %>
   <tr>
     <td><%= product.name %></td>
-    <td><%= product.productType_id %></td>
+    <td><%= product.productmain.name %></td>
+    <td><%= product.product_type.name %></td>
     <td><%= product.price %></td>
-    <td><%= product.productBrandName_id %></td>
-    <td><%= product.size_id %></td>
-    <td><%= product.colour_id %></td>
+    <td><%= product.product_brand_name.name %></td>
+    <td><%= product.size.name %></td>
+    <td><%= product.colour.name %></td>
     <td><%= product.stock %></td>
     <td><%= product.description %></td>
     <td><%= link_to 'Show', product %></td>

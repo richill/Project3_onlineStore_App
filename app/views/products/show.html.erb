@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <b>Producttype:</b>
-  <%= @product.productType_id %>
+  <b>Category:</b>
+  <%= @product.productmain.name %>
+</p>
+
+<p>
+  <b>Product Type:</b>
+  <%= @product.product_type.name %>
 </p>
 
 <p>
@@ -16,18 +21,18 @@
 </p>
 
 <p>
-  <b>Productbrandname:</b>
-  <%= @product.productBrandName_id %>
+  <b>Product Brand:</b>
+  <%= @product.product_brand_name.name %>
 </p>
 
 <p>
   <b>Size:</b>
-  <%= @product.size_id %>
+  <%= @product.size.name %>
 </p>
 
 <p>
   <b>Colour:</b>
-  <%= @product.colour_id %>
+  <%= @product.colour.name %>
 </p>
 
 <p>
