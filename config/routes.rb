@@ -1,4 +1,7 @@
 OnlineStore::Application.routes.draw do
+  resources :productmains
+
+
   resources :product_brand_names
 
 

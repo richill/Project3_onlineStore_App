@@ -15,8 +15,13 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
-<!--     <%= f.label :product_type %><br />  -->
+    <%= f.label :Category%><br />
+    <%= f.association :productmain, collection: Productmain.all, prompt: "choose a Product" %>
+  </div>
+  <div class="field">
+    <%= f.label :product_type %><br />
     <%= f.association :product_type, collection: ProductType.all, prompt: "choose a product Type" %>
   </div>
   <div class="field">
@@ -24,7 +29,7 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-<!--     <%= f.label :product_brand_name %><br /> -->
+    <%= f.label :product_brand %><br />
     <%= f.association :product_brand_name, collection: ProductBrandName.all, prompt: "choose a Brand" %>
   </div>
   <div class="field">
