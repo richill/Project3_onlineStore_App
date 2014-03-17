@@ -16,8 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-<!-- 
-    <%= f.label :product_type %><br /> -->
+<!--     <%= f.label :product_type %><br />  -->
     <%= f.association :product_type, collection: ProductType.all, prompt: "choose a product Type" %>
   </div>
   <div class="field">
@@ -25,8 +24,8 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :product_brand_name_id %><br />
-    <%= f.number_field :product_brand_name_id %>
+<!--     <%= f.label :product_brand_name %><br /> -->
+    <%= f.association :product_brand_name, collection: ProductBrandName.all, prompt: "choose a Brand" %>
   </div>
   <div class="field">
     <%= f.label :size_id %><br />
