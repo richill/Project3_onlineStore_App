@@ -1,21 +1,15 @@
 OnlineStore::Application.routes.draw do
   resources :line_items
 
-
   resources :carts
-
 
   resources :colours
 
-
   resources :sizes
-
 
   resources :productmains
 
-
   resources :product_brand_names
-
 
   resources :product_types
 
