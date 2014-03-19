@@ -1,69 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tadashi-Yanai</title>
+  <title>Tadashi-Yani</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
+
 <body>
-<!-- Shell -->
-<div class="shell">
-  <!-- Header -->
-  <div id="header">
-    <h1 id="logo"><a href="#">Tadashi Yani</a></h1>
-    <!-- Cart -->
-    <div id="cart"> <a href="#" class="cart-link">Your Shopping Cart</a>
-      <div class="cl">&nbsp;</div>
-      <span>Articles: <strong>4</strong></span> &nbsp;&nbsp; <span>Cost: <strong>$250.99</strong></span> 
+  <!-- Main -->
+  <div id="main">
+      <!-- Header -->
+    <div id="header">
+      <h1 id="logo"><a href="#">Tadashi Yani</a></h1>
+      <!-- Navigation -->
+      <div id="navigation">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Mens Store</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Bags</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">
+            <% if current_user %>
+              <%= current_user.email %> |
+              <%= link_to 'log out', destroy_user_session_path, method: :delete %>
+            <% else%>
+              <%= link_to 'create account', new_user_registration_path %> |
+              <%= link_to 'sign in', new_user_session_path %>
+            <% end %></a>
+          </li> 
+        </ul>
+      </div>
+      <!-- End Navigation --> 
+      <!-- Cart -->
+      <div id="cart"> 
+        <a href="#" id="cart-link">Your Shopping Cart</a><br>
+        <span>Articles: <strong>4</strong></span> &nbsp;&nbsp; <span>Cost: <strong>$250.99</strong></span> 
+      </div>
+      <!-- End Cart -->    
     </div>
-    <!-- End Cart -->
+    <!-- End Header -->
+    
+    <!-- Content -->
+    <div id="content">
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <!-- Search -->
+        <div class="box search">
+          <h2>Search by</h2>
+          <div class="box-content">
+            <form action="#" method="post">
+              <label>Keyword</label>
+              <input type="text" class="field" />
+              <label>Category</label>
+              <select class="field">
+                <option value="">-- Select Category --</option>
+              </select>
+              <div class="inline-field">
+                <label>Price</label>
+                <select class="field small-field">
+                  <option value="">$10</option>
+                </select>
+                <label>to:</label>
+                <select class="field small-field">
+                  <option value="">$50</option>
+                </select>
+              </div>
+              <input type="submit" class="search-submit" value="Search" />
+              <p> <a href="#" class="bul">Advanced search</a><br />
+                <a href="#" class="bul">Contact Customer Support</a> </p>
+            </form>
+          </div>
+        </div>
+        <!-- End Search -->
+      </div>
+      <!-- End Sidebar -->
 
-    <!-- Navigation -->
-    <div id="navigation">
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Mens Store</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Bags</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li class="nav-item">
-          <% if current_user %>
-            <%= current_user.email %> |
-            <%= link_to 'log out', destroy_user_session_path, method: :delete %>
-          <% else%>
-            <%= link_to 'create account', new_user_registration_path %> |
-            <%= link_to 'sign in', new_user_session_path %>
-          <% end %>
-        </li> 
-      </ul>
+      <!-- Content Slider -->
+      <div id="slider" class="box">
+        <div id="slider-holder">
+          <ul>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+        <div id="slider-nav"> 
+          <a href="#" class="active">1</a> 
+          <a href="#">2</a> <a href="#">3</a> 
+          <a href="#">4</a> </div>
+      </div>
+      <!-- End Content Slider -->
+
+
+      <!-- Products -->
+        <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      <!-- end Products -->
+
+
     </div>
-    <!-- End Navigation -->
+    <!-- End Content -->
+
   </div>
-  <!-- End Header -->
-  
-
-
-
-  <!-- start content products -->
-    <%= yield %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  <!-- end content products -->
-
-
-
+  <!-- End Main -->
 
 
   <!-- Footer -->
   <div id="footer">
-    <p class="left"> <a href="#">Home</a> <span>|</span> <a href="#">Support</a> <span>|</span> <a href="#">My Account</a> <span>|</span> <a href="#">The Store</a> <span>|</span> <a href="#">Contact</a> </p>
-    <p class="right"> &copy; 2014 Tadashi Yanai Shop</p>
+    <p class="left"> 
+      <a href="#">Home</a> <span>|
+      </span> <a href="#">Support</a> <span>|
+      </span> <a href="#">My Account</a> <span>|
+      </span> <a href="#">The Store</a> <span>|
+      </span> <a href="#">Contact</a> 
+    </p>
+    <p class="right"> &copy; 2014 Tadashi Yani Shop </p>
+    <div align=center>All rights reserved | Site by <a href='https://twitter.com/ArtLoe'>Richill ARTLoe</a></div>
   </div>
   <!-- End Footer -->
-</div>
-<!-- End Shell -->
-<div align=center>All rights reserved | Site by<a href='https://twitter.com/ArtLoe'>Richill ARTLoe</a></div></body>
+
+</body>
 </html>
