@@ -4,6 +4,8 @@
 
 <div>Your Cart</div> 
 <table>
+ 
+  
   <% @cart.line_items.each do |item| %> 
     <tr>
       <td><%= item.quantity %>&times;</td>
