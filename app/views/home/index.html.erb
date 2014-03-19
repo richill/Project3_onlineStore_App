@@ -11,7 +11,8 @@
 
         <ul>
           <% @products.each do |product| %>
-            <li> <a href="#"><img src="image.jpg" alt="" /></a>
+            <!-- <li> <a href="#"><img src="image.jpg" alt="" /></a> -->
+            <li> <%= link_to image_tag("image.jpg"), product %>
               <div class="product-info">
                 <h3>LOREM IPSUM</h3>
                 <div class="product-desc">
@@ -27,10 +28,10 @@
       </div>
       <!-- End Products -->
 
-  <!-- Side Full -->
-  <div class="side-full">
+
     <!-- More Products -->
     <div class="more-products">
+
       <div class="more-products-holder">
         <ul>
           <li><a href="#"><img src="image.jpg" alt="" /></a></li>
@@ -56,12 +57,17 @@
           <li class="last"><a href="#"><img src="images.jpg" alt="" /></a></li>
         </ul>
       </div>
-      <div class="more-nav"> <a href="#" class="prev">previous</a> <a href="#" class="next">next</a> </div>
+
+      <div class="more-nav"> 
+        <a href="#" class="prev">previous</a> 
+        <a href="#" class="next">next</a> 
+      </div>
+
     </div>
     <!-- End More Products -->
+
     <!-- Text Cols -->
     <div class="cols">
-      <div class="cl">&nbsp;</div>
       <div class="col">
         <h3 class="ico ico1">Tadashi Yani</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
@@ -82,13 +88,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
         <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
       </div>
-      <div class="cl">&nbsp;</div>
     </div>
     <!-- End Text Cols -->
-  </div>
-  <!-- End Side Full -->
 
-</div>
 
 
 
