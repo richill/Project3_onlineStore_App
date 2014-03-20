@@ -17,9 +17,9 @@
     <td>Total</td>
     <td><%= number_to_currency(@cart.total_price) %></td> 
   </tr>
-</table>
+</table><br>
 
-<%= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?' %>
-
+<%= button_to "Checkout", new_order_path, method: :get %><br>
+<%= link_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?' %> |
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>

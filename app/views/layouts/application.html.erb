@@ -24,7 +24,7 @@
           <li><a href="#">Shoes</a></li>
           <li><a href="#">
             <% if current_user %>
-              <%= current_user.email %> |
+              Hi <%= current_user.firstName %>! |
               <%= link_to 'log out', destroy_user_session_path, method: :delete %>
             <% else%>
               <%= link_to 'create account', new_user_registration_path %> |
