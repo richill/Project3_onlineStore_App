@@ -22,6 +22,7 @@ gem 'thumbs_up'
 gem 'simple_form'
 gem 'acts_as_commentable_with_threading'
 gem 'acts_as_votable'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'pry-rails'
