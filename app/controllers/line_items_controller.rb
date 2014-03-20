@@ -79,8 +79,8 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to line_items_url }
-      # format.html { redirect_to home_index_url notice: 'item was successfully deleted.'}
+      # format.html { redirect_to line_items_url }
+      format.html { redirect_to home_index_url notice: 'item was successfully deleted.'}
       # format.html { redirect_to current_cart_path(current_cart.id) }
       # format.html { redirect_to current_cart.id }
       format.json { head :no_content }

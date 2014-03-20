@@ -1,0 +1,11 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p> 
+<% end %>
+
+<div><%=link_to 'Your Shopping Cart', current_cart %></div>
+<p>
+    Items: <%= current_cart.line_items.sum(&:quantity) %> |
+    Total: <%= number_to_currency(current_cart.total_price) %> 
+</p>
+
+

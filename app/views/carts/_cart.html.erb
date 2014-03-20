@@ -1,9 +1,7 @@
-<% if notice %>
-  <p id="notice"><%= notice %></p> 
-<% end %>
-
 <div>Your Cart</div> 
 <table>
+ 
+  <%= render(@cart.line_items) %>
 
   <% @cart.line_items.each do |item| %> 
     <tr>
