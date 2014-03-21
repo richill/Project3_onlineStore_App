@@ -87,11 +87,11 @@ a.bul { padding-left:10px;}
 #slider-nav a:hover, #slider-nav a.active { background:#fff;}
 
 
-.products ul{ list-style-type: none; }
-.products ul li{ width:240px; height:383px; border:solid 1px #dedede; overflow:hidden; float:left; }
+.products ul{ list-style-type: none;  }
+.products ul li{ width:236px; height:383px; margin: 0 4px 10px 0; border:solid 1px #dedede; overflow:hidden; float:left; position: relative; }
 
 
-.product-info{ width:153px; top:194px; left:0;}
+.product-info{ width:153px; top:194px; left:0; position: absolute;}
 .product-info h3{ background:#8b0000; color:#fff; padding:6px 10px; }
 .product-info h4{ font-weight: normal;}
 .product-info p{ font-size:16px; line-height:18px; text-transform: uppercase; font-weight: bold; color:#000; padding:5px 0 7px 0;}

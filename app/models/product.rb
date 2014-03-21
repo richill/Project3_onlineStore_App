@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :colour_id, :description, :name, :price, :product_brand_name_id, :product_type_id, :size_id, :productmain_id, :colour_id, :stock
+  attr_accessible :colour_id, :description, :name, :price, :product_brand_name_id, :product_type_id, :size_id, :productmain_id, :colour_id, :stock, :product_image
 
   belongs_to :product_type 
   belongs_to :product_brand_name
@@ -10,6 +10,9 @@ class Product < ActiveRecord::Base
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
 
+  mount_uploader :product_image, ImageUploader
+
+  acts_as_commentable
 
   private
     # ensure that there are no line items referencing this product

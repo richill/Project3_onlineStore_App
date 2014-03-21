@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Image</th>
     <th>Category</th>
     <th>Product Type</th>
     <th>Price</th>
@@ -19,6 +20,7 @@
 <% @products.each do |product| %>
   <tr>
     <td><%= product.name %></td>
+    <td><%= link_to image_tag(product.product_image.thumb.url), product %></td>
     <td><%= product.productmain.name %></td>
     <td><%= product.product_type.name %></td>
     <td><%= number_to_currency(product.price) %></td>

@@ -9,4 +9,6 @@ class User < ActiveRecord::Base
   has_one :cart
   has_many :orders
   # attr_accessible :title, :body
+
+  
 end
