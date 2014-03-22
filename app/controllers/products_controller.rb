@@ -80,4 +80,13 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def addcomment
+    @product = Product.find(params[:id])
+    @comment = @product.comments.create
+    @comment.title = params[:title]
+    @comment.comment = params[:body]
+    @comment.save
+    redirect_to @product
+  end
 end

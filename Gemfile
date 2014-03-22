@@ -20,7 +20,7 @@ gem 'letter_opener'
 gem 'pagination'
 gem 'thumbs_up'
 gem 'simple_form'
-gem 'acts_as_commentable_with_threading'
+gem 'acts_as_commentable', '3.0.1'
 gem 'acts_as_votable'
 gem 'jquery-ui-rails'
 

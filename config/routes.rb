@@ -1,9 +1,7 @@
 OnlineStore::Application.routes.draw do
   resources :images
 
-
   resources :orders
-
 
   resources :line_items
 
@@ -26,6 +24,8 @@ OnlineStore::Application.routes.draw do
   resources :contacts
 
   resources :home
+
+  post '/products/:id/addcomment', to: 'products#addcomment'
 
   root to: 'home#index'
 

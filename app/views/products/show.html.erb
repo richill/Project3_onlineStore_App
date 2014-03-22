@@ -50,6 +50,13 @@
   <b>Description:</b>
   <%= @product.description %>
 </p>
+<p>
+  <form action="/products/id/addcomment" method="post">
+  <input type="text" name="title">
+  <input type="textarea" name="body">
+  <input type="submit" value="Submit">
+  </form>
+</p>
 
 <%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
 <%= link_to 'Edit', edit_product_path(@product), remote: true %> |

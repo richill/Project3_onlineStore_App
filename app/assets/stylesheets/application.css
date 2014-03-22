@@ -17,7 +17,8 @@ input, textarea, select { font-family: "Trebuchet MS", Arial, sans-serif; font-s
 
 /*.field { background:#ebebeb; border:solid 1px #dedede; padding:2px;}*/
 
-a img { border:0; }
+a img { border:0; float: left; padding-right: 6px;}
+/*a img { border:0;}*/
 
 a { color:#8b0000; text-decoration: underline; cursor:pointer; }
 a:hover { color:#666; text-decoration: none; }
@@ -35,24 +36,34 @@ h2 { font-size:14px; line-height:16px; }
 h3 { font-size:12px; line-height:14px; text-transform: uppercase; color:#000; }
 h4 { font-size:12px; line-height:14px; text-transform: uppercase; color:#000; }
 
-#main { width:960px; margin:0 auto; background:#fff; }
 
-#header { height:80px; display: block; width: 100%;}
 
-#logo h1 { font-size: 24px; line-height:1.5em; display: inline; float:left; }
+#main { width:960px; margin:0 auto; background:#fff; margin-top: 10px; }
 
+#header { height:65px; display: block; width: 100%;}
+
+h1#logo { width:163px; height:53px; float:left; background:#8b0000;}
+h1#logo a{ display:block; height:64px;margin-left: 10px; margin-top: 16px; color:#ffffff; text-decoration: none; }
+
+
+
+/*#logo h1 { font-size: 24px; line-height:1.5em; display: inline; float:left;}
+*/
 /*.shell { width:960px; margin:0 auto; padding:10px; background:#fff; }*/
 
-#navigation { display: inline; float:left; }
-#navigation ul{ list-style-type: none; font-weight: bold; }
+#navigation { display: inline; float:left; background:#8b0000; line-height: 33px; width:620px; margin-left: 1px; }
+
+/*#navigation { display: inline; float:left; padding-top: 10px}*/
+#navigation ul{ list-style-type: none; font-weight: bold;}
 #navigation ul li{ float:left; display:inline; padding: 10px;}
-#navigation ul li a{ text-decoration: none; color:#8b0000; }
-#navigation ul li a.active, #navigation ul li a:hover{ background:#fff; color:#7f7f7f; }
+#navigation ul li a{ text-decoration: none; color:#ffffff; }
+#navigation ul li a.active, #navigation ul li a:hover{ background:#fff; color:#7f7f7f; line-height: 33px;}
 
 
-#cart { display: inline; float:right; width:175px; background:#8b0000; color:#fff; padding:13px 10px 0px 10px; line-height: 20px; }
-#cart-link a { display: inline; color:#fff; padding-left: 32px; text-decoration: none;}
+#cart { display: inline; float:right; width:175px; background:#8b0000; color:#fff; padding:7px 10px 6px 10px; line-height: 20px; }
+#cart-link a { display: inline; color:#fff; padding-left: 32px; text-decoration: none; background:url(images/cart-link.gif)}
 #cart-link a:hover { text-decoration: underline;}
+/*a#cart { border:0; float: left; padding-right: 6px;}*/
 
 #content { display: block; width: 100%;}
 
