@@ -1,5 +1,8 @@
 OnlineStore::Application.routes.draw do
 
+  resources :accessories
+
+
   resources :menstores
 
 
