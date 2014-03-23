@@ -17,7 +17,7 @@ input, textarea, select { font-family: "Trebuchet MS", Arial, sans-serif; font-s
 
 /*.field { background:#ebebeb; border:solid 1px #dedede; padding:2px;}*/
 
-a img { border:0; float: left; padding-right: 6px; margin-left: -14px}
+a img { border:0; float: left; padding-right: 6px; /*margin-left: -14px*/}
 /*a img { border:0;}*/
 
 a { color:#b14525; text-decoration: underline; cursor:pointer; }
