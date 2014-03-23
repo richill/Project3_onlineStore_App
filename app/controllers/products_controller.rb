@@ -1,14 +1,22 @@
 class ProductsController < ApplicationController
+
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @products }
-    end
+    @q = Product.search(params[:q])
+    @products = @q.result(distinct: true)
+    # @products = Product.all
+    # respond_to do |format|
+    #   format.html 
+    #   format.json { render json: @products }
+    # end
   end
+
+  # def displayed_products
+  #   @q = Product.published.search(params[:q])
+  #   @products = @q.result(distinct: true)
+  #   render :index
+  # end
 
   # GET /products/1
   # GET /products/1.json

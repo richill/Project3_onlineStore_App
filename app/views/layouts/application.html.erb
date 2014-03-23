@@ -13,7 +13,7 @@
   <div id="main">
     <!-- Header -->
     <div id="header">
-      <h1 id="logo"><a href="#">Tadashi Yani</a></h1>
+      <h1 id="logo"><%= link_to 'Tadashi Yani', home_index_path %></h1>
       <!-- Navigation -->
       <div id="navigation">
         <ul>
@@ -52,8 +52,10 @@
           <h2>Search by</h2>
           <div class="box-content">
             <form action="#" method="post">
-              <label>Keyword</label>
-              <input type="text" class="field" />
+              <%= search_form_for @q do |f| %>
+                <%= f.label :name_cont, "Keyword" %>
+                <div class="field"><%= f.text_field :name_cont%></div>
+              <%end%>
               <label>Category</label>
               <select class="field">
                 <option value="">-- Select Category --</option>
@@ -82,10 +84,10 @@
       <div id="slider" class="box">
         <div id="slider-holder">
           <ul>
-            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
+<!--             <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li> -->
           </ul>
         </div>
         <div id="slider-nav"> 
