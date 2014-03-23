@@ -2,8 +2,14 @@
   <p id="notice"><%= notice %></p> 
 <% end %>
 
-<div>Your Cart</div> 
+<h1>Your Cart</h1> <br>
 <table>
+  <tr>
+    <th>Qty</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Action</th>
+  </tr>
 
   <% @cart.line_items.each do |item| %> 
     <tr>
@@ -14,12 +20,12 @@
     </tr> 
   <% end %>
   <tr>
-    <td>Total</td>
-    <td><%= number_to_currency(@cart.total_price) %></td> 
+    <td><h1>Total</h1></td>
+    <td><h1><%= number_to_currency(@cart.total_price) %></h1></td> 
   </tr>
 </table><br>
 
 <%= button_to "Checkout", new_order_path, method: :get %><br>
 <%= link_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?' %> |
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<%= link_to 'Continue to Shop', home_index_path %>
+

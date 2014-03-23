@@ -20,7 +20,7 @@
           <li class="active"><%= link_to 'Home', home_index_path %></li>
           <li><a href="#">Mens Store</a></li>
           <li><a href="#">Accessories</a></li>
-          <li><a href="#">Bags</a></li>
+          <li><%= link_to 'Bags', bags_path %></li>
           <li><a href="#">Shoes</a></li>
           <li><a href="#">
             <% if current_user %>
@@ -39,10 +39,12 @@
         <a href="" id="cart>"><img src="images/cart-link.gif"></a>
         <span><%= render 'line_items/line_item' %></span>
       </div>
-      <!-- End Cart -->    
+      <!-- End Cart --> 
     </div>
+    <div id="line1"></div> 
     <!-- End Header -->
     
+
     <!-- Content -->
     <div id="content">
       <!-- Sidebar -->
@@ -85,7 +87,7 @@
         <div id="slider-holder">
           <ul>
             <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
-<!--             <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
+<!--        <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
             <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li>
             <li><a href="#"><img src="images/slide1.jpg" alt="" /></a></li> -->
           </ul>
@@ -93,10 +95,10 @@
         <div id="slider-nav"> 
           <a href="#" class="active">1</a> 
           <a href="#">2</a> <a href="#">3</a> 
-          <a href="#">4</a> </div>
+          <a href="#">4</a> 
+        </div>
       </div>
       <!-- End Content Slider -->
-
 
       <!-- Products -->
         <%= yield %>
@@ -104,10 +106,8 @@
         <p class="alert"><%= alert %></p>
       <!-- end Products -->
 
-
     </div>
     <!-- End Content -->
-
   </div>
   <!-- End Main -->
 

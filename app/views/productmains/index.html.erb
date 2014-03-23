@@ -1,9 +1,10 @@
-<h1>Listing productmains</h1>
+
+<h1>[Admin Panel] Main Categories</h1><br>
+<%= link_to 'Create New Product Category', new_productmain_path %> <br><br>
 
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -11,13 +12,11 @@
 <% @productmains.each do |productmain| %>
   <tr>
     <td><%= productmain.name %></td>
-    <td><%= link_to 'Show', productmain %></td>
-    <td><%= link_to 'Edit', edit_productmain_path(productmain) %></td>
-    <td><%= link_to 'Destroy', productmain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Edit Name', edit_productmain_path(productmain) %></td>
+    <td><%= link_to 'Delete', productmain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Productmain', new_productmain_path %>

@@ -30,6 +30,8 @@ end
 
   resources :home
 
+  resources :bags
+
   post '/products/:id/addcomment', to: 'products#addcomment'
 
   root to: 'home#index'

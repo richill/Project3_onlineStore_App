@@ -1,0 +1,25 @@
+<h1>Featured Bags</h1><br>
+
+<!-- Products -->
+<div class="products">
+
+  <ul>
+    <% @products.each do |product| %>
+      <li> <%= link_to(image_tag(product.product_image), product) %>
+        <div class="product-info">
+          <h3>LOREM IPSUM</h3>
+          <div id="line2"></div> 
+          <div class="product-desc">
+            <h4>TITLE</h4>
+            <p><%= sanitize(product.name) %><br /></p>
+            <strong class="price"><%= number_to_currency(product.price) %></strong> 
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
+<!-- End Products -->
+
+
