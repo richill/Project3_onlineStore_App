@@ -21,7 +21,7 @@
           <li><%= link_to 'Mens Store', menstores_path %></li>
           <li><%= link_to 'Accessories', accessories_path %></li>
           <li><%= link_to 'Bags', bags_path %></li>
-          <li><a href="#">Shoes</a></li>
+          <li><%= link_to 'Shoes', shoes_path %></li>
           <li><a href="#">
             <% if current_user %>
               Hi <%= current_user.firstName %>! |
@@ -98,6 +98,7 @@
           <a href="#">4</a> 
         </div>
       </div>
+      <div id="line2"></div>
       <!-- End Content Slider -->
 
       <!-- Products -->
@@ -119,6 +120,7 @@
       </span> <a href="#">Support</a> <span>|
       </span> <a href="#">My Account</a> <span>|
       </span> <a href="#">The Store</a> <span>|
+      </span> <a href="#">Admin Access</a> <span>|
       </span> <a href="#">Contact</a> 
     </p>
     <p class="right"> &copy; 2014 Tadashi Yani Shop </p>

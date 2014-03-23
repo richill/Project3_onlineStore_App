@@ -17,7 +17,7 @@ input, textarea, select { font-family: "Trebuchet MS", Arial, sans-serif; font-s
 
 /*.field { background:#ebebeb; border:solid 1px #dedede; padding:2px;}*/
 
-a img { border:0; float: left; padding-right: 6px;}
+a img { border:0; float: left; padding-right: 6px; margin-left: -14px}
 /*a img { border:0;}*/
 
 a { color:#b14525; text-decoration: underline; cursor:pointer; }
@@ -32,6 +32,7 @@ a:hover { color:#666; text-decoration: none; }
 .ar { text-align: right; }
 .ac { text-align: center; }
 
+h1 { line-height:20px; }
 h2 { font-size:14px; line-height:16px; }
 h3 { font-size:12px; line-height:14px; text-transform: uppercase; color:#000; }
 h4 { font-size:12px; line-height:14px; text-transform: uppercase; color:#000; }
@@ -67,7 +68,7 @@ h1#logo a{ display:block; height:64px;margin-left: 10px; margin-top: 16px; color
 
 
 #line1 { width: 960px; background:#d34325; padding:1px; position: absolute; width: 960px; margin-top: -12px; }
-#line2 { background:#493838; color:#fff; padding:1px; position: absolute; width: 153px; }
+#line2 { width: 960px; background:#d34325; padding:1px; position: absolute; width: 960px; margin-top: 255px; }
 
 #content { display: block; width: 100%;}
 
