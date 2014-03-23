@@ -1,12 +1,12 @@
-class BagsController < ApplicationController
+class MenstoresController < ApplicationController
   before_filter :authenticate_user!
-
+  
   # GET /products
   # GET /products.json
   def index
     # @q = Product.search(params[:q])
     # @products = @q.result(distinct: true)
-    @products = Productmain.find_by_name('Bags').products
+    @products = Productmain.find_by_name('Clothes').products
     respond_to do |format|
       format.html 
       format.json { render json: @products }
@@ -99,3 +99,4 @@ class BagsController < ApplicationController
     redirect_to @product
   end
 end
+

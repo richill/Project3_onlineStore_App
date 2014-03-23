@@ -1,5 +1,8 @@
 OnlineStore::Application.routes.draw do
 
+  resources :menstores
+
+
 resources :products do
   collection { post :search, to: 'products#index' }
 end
