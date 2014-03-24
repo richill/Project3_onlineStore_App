@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   def set_global_search_variable
     @q = Product.search(params[:q])
+    @product_categories_for_search = [Productmain.new(name: "all categories")] + Productmain.all
+    @product_categories_type_for_search = [ProductType.new(name: "all categories")] + ProductType.all
   end
 
   protected

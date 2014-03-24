@@ -53,15 +53,19 @@
         <div class="box search">
           <h2>Search by</h2>
           <div class="box-content">
-            <form action="#" method="post">
-              <%= search_form_for @q do |f| %>
+            <%= search_form_for @q do |f| %>
+              <p>
                 <%= f.label :name_cont, "Keyword" %>
                 <div class="field"><%= f.text_field :name_cont%></div>
-              <%end%>
+              </p>
               <label>Category</label>
-              <select class="field">
-                <option value="">-- Select Category --</option>
-              </select>
+              <%= f.collection_select :productmain_id_eq, @product_categories_for_search, :id, :name %>
+              <label>Product Type</label>
+              <%= f.collection_select :product_type_id_eq, @product_categories_type_for_search, :id, :name %>
+              <%= f.submit 'Search', :class => "search-submit" %>
+            <% end %>
+
+<!-- 
               <div class="inline-field">
                 <label>Price</label>
                 <select class="field small-field">
@@ -71,11 +75,9 @@
                 <select class="field small-field">
                   <option value="">$50</option>
                 </select>
-              </div>
-              <input type="submit" class="search-submit" value="Search" />
-              <p> <a href="#" class="bul">Advanced search</a><br />
-                <a href="#" class="bul">Contact Customer Support</a> </p>
-            </form>
+              </div> -->
+              
+              <p> <a href="#" class="bul">Advanced search</a><br /> <a href="#" class="bul">Contact Customer Support</a> </p>
           </div>
         </div>
         <!-- End Search -->

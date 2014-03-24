@@ -162,3 +162,8 @@ td { border-bottom: 1px solid #ccc; }
 .comment-content { clear: both; }
 
 
+
+.new_product label {
+  display: block;
+}
+
