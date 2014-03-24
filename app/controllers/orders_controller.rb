@@ -25,7 +25,6 @@ class OrdersController < ApplicationController
   # GET /orders/new.json
   def new
     @cart = current_cart
-    @order.add_line_items_from_cart(current_cart)
     if @cart.line_items.empty?
       redirect_to home_index_url, notice: "Your cart is empty"
       return
@@ -49,17 +48,35 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(params[:order])
+    @order.add_line_items_from_cart(current_cart)
 
     respond_to do |format|
       if @order.save
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
         format.html { redirect_to @order }
         format.json { render json: @order, status: :created, location: @order }
       else
+        @cart = current_cart
         format.html { render action: "new" }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
   end
+
+  # def create
+  #   @order = Order.new(params[:order])
+
+  #   respond_to do |format|
+  #     if @order.save
+  #       format.html { redirect_to @order }
+  #       format.json { render json: @order, status: :created, location: @order }
+  #     else
+  #       format.html { render action: "new" }
+  #       format.json { render json: @order.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PUT /orders/1
   # PUT /orders/1.json

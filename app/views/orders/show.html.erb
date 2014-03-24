@@ -4,7 +4,7 @@
 
 <p>------Your payment was successful------</p><br>
 
-<p>Thank you for your payment. Your order reference is: #167865 </p>
+<p>Thank you for your oder. Your order reference is: #167865 </p>
 A confirmation email has been sent to: </p>
 <p><%= @order.email %></p><br><br>
 
@@ -28,13 +28,4 @@ A confirmation email has been sent to: </p>
 <p>
   <b>Pay type:</b>
   <%= @order.pay_type %>
-</p>
-<p>
-  #Items: <%= current_cart.line_items.sum(&:quantity) %> |
-  Total Price: <%= number_to_currency(current_cart.total_price) %> 
-</p></br>
-
-
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+</p><br>

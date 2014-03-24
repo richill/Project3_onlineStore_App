@@ -14,4 +14,10 @@ class Order < ActiveRecord::Base
                     "Visa Electron (UKE)",
                     "American Express (1.52% Charge: $0.78)"]
 
+  def add_line_items_from_cart(cart)
+    cart.line_items.each do |item|
+      item.cart_id = nil
+      line_items << item
+    end
+  end
 end
