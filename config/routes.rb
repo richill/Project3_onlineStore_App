@@ -44,7 +44,7 @@ end
 
   resources :bags
 
-  post '/products/:id/addcomment', to: 'products#addcomment'
+  post '/products/:id/addcomment', to: 'products#addcomment', as: :addcomment
 
   root to: 'home#index'
 

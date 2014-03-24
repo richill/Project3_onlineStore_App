@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
   belongs_to :size
   belongs_to :colour
 
+  has_many :comments
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
 

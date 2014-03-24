@@ -1,62 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @product.name %>
-</p>
+<!-- Product Detail Page -->
+<div class="product-main"> 
+  <div class="column1"> 
+    <div class="product-image"> 
+      <%= image_tag @product.product_image.detail.url %>
+    </div> 
+  </div>
 
-<p>
-  <%= image_tag @product.product_image.detail.url %>
-</p>
+  <div class="column2"> 
+    <div class="product-information"> 
+      <h1><%= @product.name %></h1>
+      <%= @product.product_brand_name.name %> | 
+      <%= @product.productmain.name %> >>
+      <%= @product.product_type.name %>
+      <div class="description">
+        <%= @product.description %>
+      </div>
 
-<p>
-  <b>Category:</b>
-  <%= @product.productmain.name %>
-</p>
+      <div class="price">
+        <%= number_to_currency(@product.price) %>
+      </div>
 
-<p>
-  <b>Product Type:</b>
-  <%= @product.product_type.name %>
-</p>
+      <div id="line3"></div>
 
-<p>
-  <b>Price:</b>
-  <%= number_to_currency(@product.price) %>
+      <p>
+        <b>Colour:</b>
+        <%= @product.colour.name %>
+      </p>
 
-</p>
+      <p>
+        <b>Size:</b>
+        <%= @product.size.name %>
+      </p>
 
-<p>
-  <b>Product Brand:</b>
-  <%= @product.product_brand_name.name %>
-</p>
+      <p>
+        <b>Stock:</b>
+        <%= @product.stock %>
+      </p>
 
-<p>
-  <b>Size:</b>
-  <%= @product.size.name %>
-</p>
+      <p>
+        <%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
+      <p>
+    </div> 
+  </div> 
+  <div class="bottom">
+    <h1>Comments</h1></b>
+    <div class="comment-container">
+      <% @product.comments.each do |orange| %>
+      <div class = "comment-content">
+        <div class="bubble-image"><img src="#"></div>
+        <div class="comment">
+          <%= orange.user.firstName %> <br> 
+          <%= orange.comment %> 
+          <div id="date"><em>24.20.2014</em></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class='comment-form'>
+    <%= form_tag addcomment_path(@product), method: "post" do %>
+      <input type="textarea" name="body" placeholder="write a comment">
+      <input type="submit" value="Post">
+    <%end%><br>
+  </div>
+</div>
+<!-- End Product Detail Page -->
 
-<p>
-  <b>Colour:</b>
-  <%= @product.colour.name %>
-</p>
-
-<p>
-  <b>Stock:</b>
-  <%= @product.stock %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @product.description %>
-</p>
-<p>
-  <form action="/products/id/addcomment" method="post">
-  <input type="text" name="title">
-  <input type="textarea" name="body">
-  <input type="submit" value="Submit">
-  </form>
-</p>
-
-<%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
-<%= link_to 'Edit', edit_product_path(@product), remote: true %> |
-<%= link_to 'Back', products_path %>

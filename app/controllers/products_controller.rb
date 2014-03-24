@@ -93,6 +93,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @comment = @product.comments.create
     @comment.title = params[:title]
+    @comment.user = current_user
     @comment.comment = params[:body]
     @comment.save
     redirect_to @product

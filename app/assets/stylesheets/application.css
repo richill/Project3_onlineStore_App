@@ -69,6 +69,7 @@ h1#logo a{ display:block; height:64px;margin-left: 10px; margin-top: 16px; color
 
 #line1 { width: 960px; background:#d34325; padding:1px; position: absolute; width: 960px; margin-top: -12px; }
 #line2 { width: 960px; background:#d34325; padding:1px; position: absolute; width: 960px; margin-top: 255px; }
+#line3 { background:#493838; padding:1px; position: absolute; width: 153px; margin-top: 0px; }
 
 #content { display: block; width: 100%;}
 
@@ -135,11 +136,8 @@ a.bul { padding-left:10px;}
 .col-last { margin-right:0; padding-bottom: 20px;}
 
 h3.ico { background-repeat:no-repeat; background-position:0 2px; padding:6px 0 8px 30px;}
-h3.ico1 { background-image:url(images/ico1.gif);}
-h3.ico2 { background-image:url(images/ico2.gif);}
-h3.ico3 { background-image:url(assets/images/ico3.gif);}
-/*h3.ico4 { background-image:url(images/ico4.gif);}*/
-h3.ico4{ background-image:url(assets/images/ico3.gif) }
+h3.ico1 { background-image:url(/images/ico1.gif);}
+
 
 
 #footer { height:51px; background:#ebebeb; line-height:50px; padding:0 15px; color:#7b7b7b; margin-top:10px; display: block; clear: both;}
@@ -147,27 +145,20 @@ h3.ico4{ background-image:url(assets/images/ico3.gif) }
 #footer a:hover{ color:#000;}
 #footer span{ padding:0 2px;}
 
+table { width: 100%; text-align: left; }
+th { padding: 10px 10px; }
+td { padding: 10px 10px; font-size: 10px; }
+th { color: #fff; background: #bfbcc0 none repeat-x scroll left top; }
+td { border-bottom: 1px solid #ccc; }
 
-table {
-  width: 100%;
-  text-align: left;
-}
+.column1 { border:solid 1px #dedede; float: left; display: inline-block; margin-bottom: 20px;}
+.column2 { border:solid 1px #dedede; float: right; width: 612px; height: 406px; margin-bottom: 20px;}
+.bottom {}
 
-th {
-  padding: 10px 10px;
-}
+.bubble-image { float: left; border:solid 1px #dedede; height: 60px; width: 60px; margin-top: 20px;}
+.comment { padding: 10px; float: right; border:solid 1px #dedede; height: 60px; width: 887px; margin-top: 20px; border-radius:10px; box-shadow:1px 1px 5px rgba(0,0,0,.2);}
+#date { left: 10px}
+.comment-form { float:left; clear: both; margin-top: 30px;}
+.comment-content { clear: both; }
 
-td {
-  padding: 10px 10px;
-  font-size: 10px;
-}
-
-th {
-  color: #fff;
-  background: #bfbcc0 none repeat-x scroll left top;
-}
-
-td {
-  border-bottom: 1px solid #ccc;
-}
 

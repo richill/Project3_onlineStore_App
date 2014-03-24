@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :firstName, :lastName, :dob, :gender, :description, :address, :postcode, :city, :country
   has_one :cart
   has_many :orders
+  has_many :comments
   # attr_accessible :title, :body
 
   
