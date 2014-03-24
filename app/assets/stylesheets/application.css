@@ -161,9 +161,8 @@ td { border-bottom: 1px solid #ccc; }
 .comment-form { float:left; clear: both; margin-top: 30px;}
 .comment-content { clear: both; }
 
+.new_product label { display: block; }
 
 
-.new_product label {
-  display: block;
-}
+
 

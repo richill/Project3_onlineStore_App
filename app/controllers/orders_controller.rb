@@ -25,6 +25,7 @@ class OrdersController < ApplicationController
   # GET /orders/new.json
   def new
     @cart = current_cart
+    @order.add_line_items_from_cart(current_cart)
     if @cart.line_items.empty?
       redirect_to home_index_url, notice: "Your cart is empty"
       return
@@ -51,7 +52,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.html { redirect_to @order }
         format.json { render json: @order, status: :created, location: @order }
       else
         format.html { render action: "new" }
