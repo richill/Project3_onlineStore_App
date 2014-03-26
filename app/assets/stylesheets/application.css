@@ -212,8 +212,17 @@ td { border-bottom: 1px solid #ccc; }
 
 
 /*--- sign-in design ---*/
-.sign-title {margin-top: 0px; }
+#sign-title h2 { clear: both; font-size: 40px; padding-top: 18px; padding-bottom: 30px; }
+.s-header { font-size: 20px; }
+.s-box { height: 30px; width: 221px; margin-bottom: 14px; }
+#s-rem { width: 15px; }
+#s-button { border:solid 1px #dedede; height: 40px; width: 222px;font-size: 18px; line-height: 38px; text-align: center; background: #555555; margin-top: 23px; color: #fff; }
 /*--- end sign-in design*/
 
+/*--- sign-up design ---*/
+
+#s-button1 { border:solid 1px #dedede; height: 40px; width: 222px;font-size: 18px; line-height: 38px; text-align: center; background: #555555; margin-top: 12px; color: #fff; }
+
+/*--- end sign-up design ---*/
 
 

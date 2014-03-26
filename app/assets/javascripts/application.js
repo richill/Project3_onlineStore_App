@@ -46,7 +46,6 @@ function rotate_products() {
 };
 
 
-
 $(document).ready(function () {
   Slider();
 
