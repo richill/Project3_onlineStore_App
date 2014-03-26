@@ -31,23 +31,32 @@ function Slider() {
 }
 
 
+function rotate_products() {
+  $moreProducts = $('#more-products-holder-carousel');
+  poductImageLi = $moreProducts.children().first();
+  poductImageLi.hide("slide", { 
+      direction: "left",
+      complete: function() {
+        poductImageLi.remove();
+        $moreProducts.append(poductImageLi);
+        poductImageLi.show();
+      } 
+    },
+    500);
+};
+
 
 
 $(document).ready(function () {
   Slider();
 
+  $("#zoom_05").elevateZoom({
+    zoomType        : "inner",
+    cursor: "crosshair"
+  });
 
-$("#zoom_05").elevateZoom({
-  zoomType        : "inner",
-  cursor: "crosshair"
+  productSlider = setInterval(function() { rotate_products() }, 2000);
 });
-
-
-
-
-
-});
-
 
 
 
