@@ -78,7 +78,7 @@ h1#logo a{ display:block; height:64px;margin-left: 10px; margin-top: 16px; color
 .box { padding:1px; border:solid 1px #dedede; margin-bottom:10px;}
 .box h2{ background:#7f7f7f; color:#fff; font-weight: normal; padding:0 5px; position:relative; line-height:27px; }
 .box h2 span{ position:absolute; width:10px; height:5px; top:27px; right:10px; font-size:0; line-height:0;}
-.box-content { padding:5px;}
+.box-content { padding:5px; height: 0px;}
 
 .search { min-height:256px;}
 .search label { display:block; padding-bottom:3px; }
@@ -90,8 +90,15 @@ h1#logo a{ display:block; height:64px;margin-left: 10px; margin-top: 16px; color
 .search select.field { width:212px; }
 .search select.small-field { width:50px; }
 
-.search-submit { width:70px; background:#493838; border:0; color:#fff; height:27px; display:block; line-height:26px; cursor:pointer; margin:12px 0 10px 0;}
+.search-submit { width:70px; background:#493838; border:0; color:#fff; height:27px; display:block; line-height:26px; cursor:pointer; margin: -3px 0 10px 0;}
 a.bul { padding-left:10px;}
+
+#category { margin-top: -3px; }
+#producttype { margin-top: 11px; }
+.serachprice {margin-top: 10px; }
+#pricerange {margin-bottom: 13px;}
+.from {width: 80px; float: left; margin-right: 6px; }
+.to {width: 80px; float: right; margin-right: 20px; margin-top: -19px; }
 
 
 #slider { display: inline-block; height:256px; float: left; margin-left: 10px; overflow: hidden;}
