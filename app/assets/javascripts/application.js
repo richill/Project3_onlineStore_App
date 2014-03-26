@@ -14,3 +14,41 @@
 //= require jquery.ui.all
 //= require jquery_ujs
 //= require_tree .
+
+function Slider() {
+  var sc = $("#slider img").size();
+  var count = 2;
+  setInterval(function() {
+    $("#slider #slide"+count).show("slide", {direction: 'right'}, 500);
+    $("#slider #slide"+count).delay(3500).hide("slide", {direction: 'left'}, 500);
+
+    if(count == sc){
+      count = 1;
+    }else{
+      count = count + 1;
+    }
+  }, 4500);
+}
+
+
+
+
+$(document).ready(function () {
+  Slider();
+
+
+$("#zoom_05").elevateZoom({
+  zoomType        : "inner",
+  cursor: "crosshair"
+});
+
+
+
+
+
+});
+
+
+
+
+

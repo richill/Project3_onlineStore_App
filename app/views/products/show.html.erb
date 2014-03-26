@@ -4,46 +4,44 @@
 <div class="product-main"> 
   <div class="column1"> 
     <div class="product-image"> 
-      <%= image_tag @product.product_image.detail.url %>
+      <%= image_tag @product.product_image.detail.url, :id => 'zoom_05', :data => { "zoom-image" => "#{@product.product_image.url}"}   %>
     </div> 
   </div>
 
   <div class="column2"> 
     <div class="product-information"> 
-      <h1><%= @product.name %></h1>
-      <%= @product.product_brand_name.name %> | 
-      <%= @product.productmain.name %> >>
-      <%= @product.product_type.name %>
-      <div class="description">
+      <h1 id="pd-header"><%= @product.name %></h1>
+
+      <div id="pd-info">
+        <%= @product.product_brand_name.name %> | 
+        <%= @product.productmain.name %> >>
+        <%= @product.product_type.name %>
+      </div>
+
+      <div id="pd-description">
         <%= @product.description %>
       </div>
 
-      <div class="price">
+      <div id="pd-price">
         <%= number_to_currency(@product.price) %>
       </div>
 
-      <div id="line3"></div>
+      <div id="line4"></div>
 
-      <p>
-        <b>Colour:</b>
-        <%= @product.colour.name %>
-      </p>
+      <div id="pd-subhead1">Available In:</div>
 
-      <p>
-        <b>Size:</b>
-        <%= @product.size.name %>
-      </p>
+      <div id="pd-subcontent">
+        <div id="block1"><b>Colour:</b> <%= @product.colour.name %></div>
+        <div id="block2"><b>Size:</b> <%= @product.size.name %></div>
+        <div id="block3"><b>In- Stock:</b> <%= @product.stock %></div>
+      </div>
+      <div id="line5"></div>
+      </div id="cart">
+        <%= button_to 'Add to Cart', line_items_path(product_id: @product), :id => "addCart"  %>
+      </div> 
+    </div>
+  </div>
 
-      <p>
-        <b>Stock:</b>
-        <%= @product.stock %>
-      </p>
-
-      <p>
-        <%= button_to 'Add to Cart', line_items_path(product_id: @product) %>
-      <p>
-    </div> 
-  </div> 
   <div class="bottom">
     <h1>Comments</h1></b>
     <div class="comment-container">
@@ -51,7 +49,7 @@
       <div class = "comment-content">
         <div class="bubble-image"><img src="#"></div>
         <div class="comment">
-          <%= orange.user.firstName %> <br> 
+          <div class="pd-firstname"><%= orange.user.firstName %> <br> </div>
           <%= orange.comment %> 
           <div id="date"><em>24.20.2014</em></div>
         </div>
@@ -59,10 +57,11 @@
       <% end %>
     </div>
   </div>
+  <div id="line6"></div>
   <div class='comment-form'>
     <%= form_tag addcomment_path(@product), method: "post" do %>
-      <input type="textarea" name="body" placeholder="write a comment">
-      <input type="submit" value="Post">
+      <input type="textarea" name="body" placeholder="write a comment" id="pd-textarea">
+      <input type="submit" value="Post" id="pd-post">
     <%end%><br>
   </div>
 </div>

@@ -4,92 +4,94 @@
 <% end %>
 
 
+
+
 <body>
 
-      <!-- Products -->
-      <div class="products">
+    <!-- Products -->
+    <div class="products">
 
-        <ul>
-          <% @products.each do |product| %>
-            <li> <%= link_to(image_tag(product.product_image), product) %>
-              <div class="product-info">
-                <h3>LOREM IPSUM</h3>
-                <div id="line3"></div>
-                <div class="product-desc">
-                  <h4>TITLE</h4>
-                  <p><%= sanitize(product.name) %><br /></p>
-                  <strong class="price"><%= number_to_currency(product.price) %></strong> 
-                </div>
+      <ul>
+        <% @products.each do |product| %>
+          <li> <%= link_to(image_tag(product.product_image), product) %>
+            <div class="product-info">
+              <h3>LOREM IPSUM</h3>
+              <div id="line3"></div>
+              <div class="product-desc">
+                <h4>TITLE</h4>
+                <p><%= sanitize(product.name) %><br /></p>
+                <strong class="price"><%= number_to_currency(product.price) %></strong> 
               </div>
-            </li>
-          <% end %>
-        </ul>
-
-      </div>
-      <!-- End Products -->
-
-
-    <!-- More Products -->
-    <div class="more-products">
-
-      <div class="more-products-holder">
-        <ul>
-          <li><a href="#"><img src="images/pic1.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li><a href="#"><img src="image.jpg" alt="" /></a></li>
-          <li class="last"><a href="#"><img src="images.jpg" alt="" /></a></li>
-        </ul>
-      </div>
-
-      <div class="more-nav"> 
-        <a href="#" class="prev">previous</a> 
-        <a href="#" class="next">next</a> 
-      </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
 
     </div>
-    <!-- End More Products -->
+    <!-- End Products -->
 
-    <!-- Text Cols -->
-    <div class="cols">
-      <div class="col">
-        <h3 class="ico ico1">Tadashi Yani</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
+    <div class="side-full">
+      <!-- More Products -->
+      <div class="more-products">
+        <div class="more-products-holder">
+          <ul>
+            <li><a href="#"><img src="images/pic1.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="image.jpg" alt="" /></a></li>
+            <li class="last"><a href="#"><img src="images.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+
+        <div class="more-nav"> 
+          <a href="#" class="prev">previous</a> 
+          <a href="#" class="next">next</a> 
+        </div>
+
       </div>
-      <div class="col">
-        <h3 class="ico ico2">About Us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
+      <!-- End More Products -->
+
+      <!-- Text Cols -->
+      <div class="cols">
+        <div class="col">
+          <h3 class="ico ico1">Tadashi Yani</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
+          <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
+        </div>
+        <div class="col">
+          <h3 class="ico ico2">About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
+          <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
+        </div>
+        <div class="col">
+          <h3 class="ico ico3">Services</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
+          <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
+        </div>
+        <div class="col col-last">
+          <h3 class="ico ico4">Contact Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
+          <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
+        </div>
       </div>
-      <div class="col">
-        <h3 class="ico ico3">Services</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
-      </div>
-      <div class="col col-last">
-        <h3 class="ico ico4">Contact Us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
-      </div>
+      <!-- End Text Cols -->
     </div>
-    <!-- End Text Cols -->
 
 
 
