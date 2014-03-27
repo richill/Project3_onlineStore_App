@@ -33,7 +33,7 @@
       <div id="pd-subcontent">
         <div id="block1"><b>Colour:</b> <%= @product.colour.name %></div>
         <div id="block2"><b>Size:</b> <%= @product.size.name %></div>
-        <div id="block3"><b>In- Stock:</b> <%= @product.stock %></div>
+        <div id="block3"><b>In-Stock:</b> <%= @product.stock %></div>
       </div>
       <div id="line5"></div>
       </div id="cart">
@@ -47,11 +47,11 @@
     <div class="comment-container">
       <% @product.comments.each do |orange| %>
       <div class = "comment-content">
-        <div class="bubble-image"><img src="#"></div>
+        <div class="bubble-image"><img src="/images/gravatar.jpg"></div>
         <div class="comment">
           <div class="pd-firstname"><%= orange.user.firstName %> <br> </div>
           <%= orange.comment %> 
-          <div id="date"><em>24.20.2014</em></div>
+          <div id="date"><em><%= Time.now %></em></div>
         </div>
       </div>
       <% end %>
