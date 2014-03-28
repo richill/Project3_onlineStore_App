@@ -192,7 +192,7 @@ td { border-bottom: 1px solid #ccc; }
 
 .bubble-image { float: left; /*border:solid 1px #dedede;*/ height: 60px; width: 60px; margin-top: 29px; margin-left: 0px;}
 .comment { padding: 10px; float: right; border:solid 1px #dedede; height: 61px; width: 887px; margin-top: 19px; border-radius:10px; box-shadow:1px 1px 5px rgba(0,0,0,.2); margin-right: 13px;}
-#date { margin-left: 724px; color: #aca6a6; }
+#date { margin-left: 790px; color: #aca6a6; }
 .comment-form { float:left; clear: both; margin-top: 14px;}
 .comment-content { clear: both; }
 .pd-firstname { color: #d34325; font-size: 16px; margin-bottom: 2px; }
