@@ -1,6 +1,13 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
+  def store_dir
+    "uploads/product/product_image/1/"
+  end
+  
+  # def default_url
+  #   "/public/uploads/product/product_image/1/" + [version_name, "image1xxl.jpg"].compact.join('_')
+  # end
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick

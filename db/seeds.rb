@@ -74,24 +74,9 @@ u1 = User.new(firstName: 'richill', lastName: 'tamakloe', email: 'richill@gmail.
 u1.save!
 
 Product.delete_all
-p1 = Product.create!(name:'Pepe Heritage T-shirt Slim Fit', product_type_id: pt6.id, price: 15.00, product_brand_name_id: pb1.id, size_id: s1.id,  colour_id: c1.id, stock: nil, description: 'Pene Jeans Heritage looks to old world American workwear to bring forth a collection of premium denim using innovative, hands-on design techniques.', productmain_id: pm1.id )
-
-  Product.update_all("product_image = 'image1xxl.jpg'", "id = #{p1.id}")
-
-# pi = ImageUploader.create!(:product => product)
-# pi.image.store!(File.open(File.join(Rails.root, 'image1xxl.jpg')))
-# product.product_images << pi
-# product.save!
+p1 = Product.create!(name:'Pepe Heritage T-shirt Slim Fit', product_type_id: pt6.id, price: 15.00, product_brand_name_id: pb1.id, size_id: s1.id,  colour_id: c1.id, stock: 5, description: 'Pene Jeans Heritage looks to old world American workwear to bring forth a collection of premium denim using innovative, hands-on design techniques.', productmain_id: pm1.id, product_image: File.open(File.join(Rails.root, '/public/images/seed_pic1.jpg')))
 
 
-
-
-
-
-
-# Comment.delete_all
-# # Comment.update_all("comment = 'lovely outfit'", "id = #{p1.id}", "user_id = #{u1.id.integer}")
-# cm1 = Comment.create!(title: nil, comment: "lovely outfit", commentable_id: p1.id, commentable_type: "Product", user_id: u1.id)
 
 
 
