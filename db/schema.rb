@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140324192927) do
+ActiveRecord::Schema.define(:version => 20140402230622) do
 
   create_table "accessories", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20140324192927) do
     t.integer  "user_id"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
+    t.integer  "product_id"
   end
 
   add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
@@ -119,6 +120,7 @@ ActiveRecord::Schema.define(:version => 20140324192927) do
     t.integer  "productmain_id"
     t.string   "product_image"
     t.integer  "moderator_id"
+    t.integer  "comment_id"
   end
 
   create_table "shoes", :force => true do |t|
