@@ -78,6 +78,10 @@ p1 = Product.create!(name:'Pepe Heritage T-shirt Slim Fit', product_type_id: pt6
 
 p2 = Product.create!(name:'Pepe Heritage T-shirt Slim Fit', product_type_id: pt6.id, price: 25.00, product_brand_name_id: pb1.id, size_id: s2.id,  colour_id: c3.id, stock: 3, description: 'Pene Jeans Heritage looks to old world American workwear to bring forth a collection of premium denim using innovative, hands-on design techniques.', productmain_id: pm1.id, product_image: File.open(File.join(Rails.root, '/public/images/seed_pic2.jpg')))
 
+p3 = Product.create!(name:'River Island T-Shirt', product_type_id: pt6.id, price: 18.00, product_brand_name_id: pb5.id, size_id: s2.id,  colour_id: c1.id, stock: 4, description: 'High street favourites River Island are known for the unique touches they add to their directional pieces of men’s clothing. River Island offer a complete menswear range that covers everything from the newest cuts in jeans to graphic print t-shirts and knitwear', productmain_id: pm1.id, product_image: File.open(File.join(Rails.root, '/public/images/seed_pic3.jpg')))
+
+p4 = Product.create!(name:'ASOS Stripe Long Sleeve T-Shirt', product_type_id: pt6.id, price: 55.00, product_brand_name_id: pb4.id, size_id: s2.id,  colour_id: c4.id, stock: 2, description: 'High street favourites are known for the unique touches they add to their directional pieces of men’s clothing. River Island offer a complete menswear range that covers everything from the newest cuts in jeans to graphic print t-shirts and knitwear', productmain_id: pm1.id, product_image: File.open(File.join(Rails.root, '/public/images/seed_pic4.jpg')))
+
 
 
 
